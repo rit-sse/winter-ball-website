@@ -1,21 +1,30 @@
-// Standard File for most common CSS
+/* Standard File for most common CSS */
+
+html, body{
+	width: 100%;
+	background-color: red;
+}
+
+section{
+	height: 100%;
+}
 
 #home {
-
+	height: 100%;
 }
 
 #tickets {
-
+	height: 100%;
 }
 
 #alumni {
-
+	height: 100%;
 }
 
 #sponsor {
-
+	height: 100%;
 }
 
 #contact {
-
+	height: 100%;
 }
