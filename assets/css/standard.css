@@ -1,7 +1,22 @@
 // Standard File for most common CSS
 
-#home {
+@font-face {
+  src:url(../fonts/Raleway-Regular.ttf);
+  font-family: "Raleway";
+}
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+h1, h2, h3 {
+  font-family: "Lobster";
+}
+
+p {
+  font-family: "Raleway";
+}
+
+#home {
+  height: 100%;
 }
 
 #tickets {
