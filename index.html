@@ -3,42 +3,49 @@
 	<head>
 		<title>SSE Winter Ball 2016</title>
 		<link rel="stylesheet" href="assets/css/paper.min.css" type="text/css">
+		<link rel="styhesheet" href="assets/fullpage.js/jquery.fullpage.min.css" type="text/css">
 		<link rel="stylesheet" href="assets/css/standard.css" type="text/css">
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/fullpage.js/jquery.fullpage.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage();
+			});
+		</script>
 	</head>
 	<body>
-			<div id="content">
-				<section id="home">
-					<h1>Hello! Welcome to the Winter Ball Website.</h1>
-					<p>Feel free to explore!</p>
-					<p id="year"></p>
-					<script>
-					function get_year(){
-						this.d = new Date();
-						this.y = this.d.getFullYear();
-					}
-					var year = new get_year();
-					document.getElementById("year").innerHTML = year.y
-					</script>
-				</section>
+		<div id="fullpage">
+			<section class="section" id="home">
+				<h1>Hello! Welcome to the Winter Ball Website.</h1>
+				<p>Feel free to explore!</p>
+				<p id="year"></p>
+			</section>
 
-				<section id="tickets">
-					<p>THIS WEBSITE IS AWESOME!!!!</p>
-				</section>
+			<section class="section" id="tickets">
+				<p>THIS WEBSITE IS AWESOME!!!!</p>
+			</section>
 
-				<section id="alumni">
+			<section class="section" id="alumni">
 
-				</section>
+			</section>
 
-				<section id="sponsor">
+			<section class="section" id="sponsor">
 
-				</section>
+			</section>
 
-				<section id="contact">
+			<section class="section" id="contact">
 
-				</section>
-			</div>
+			</section>
+		</div>
 	</body>
+	<script>
+		function get_year(){
+			this.d = new Date();
+			this.y = this.d.getFullYear();
+		}
+		var year = new get_year();
+		document.getElementById("year").innerHTML = year.y
+	</script>
 </html>
