@@ -16,7 +16,8 @@ html, body{
   display: table;
 }
 
-.container, #content{
+#content{
+  position: relative;
   height: 100%;
 }
 
@@ -35,6 +36,9 @@ p {
 
 #tickets {
   height: 100%;
+  background-color: #00AEEF;
+  background-image: url("../images/octo-image.gif");
+  background-repeat: no-repeat;
 }
 
 #alumni {
