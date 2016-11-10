@@ -13,6 +13,15 @@
 				<section id="home">
 					<h1>Hello! Welcome to the Winter Ball Website.</h1>
 					<p>Feel free to explore!</p>
+					<p id="year"></p>
+					<script>
+					function get_year(){
+						this.d = new Date();
+						this.y = this.d.getFullYear();
+					}
+					var year = new get_year();
+					document.getElementById("year").innerHTML = year.y
+					</script>
 				</section>
 
 				<section id="tickets">
