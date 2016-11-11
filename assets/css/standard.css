@@ -13,12 +13,10 @@ html, body{
   margin: 0;
   padding: 0;
   margin: 0 auto;
-  display: table;
 }
 
 #fullpage{
-  position: relative;
-  height: 100%;
+	
 }
 
 h1, h2, h3 {
@@ -26,19 +24,21 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.raleway{
+	font-family: "Raleway";
+}
+
 p {
   font-family: "Raleway";
 }
 
 #home {
-  height: 100%;
   background-image: url("../images/waves.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 #tickets {
-  height: 100%;
   background: rgb(107,186,112); /* Old browsers */
   background: -moz-linear-gradient(-45deg, rgba(107,186,112,1) 0%, rgba(0,183,183,1) 48%, rgba(107,186,112,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, rgba(107,186,112,1) 0%,rgba(0,183,183,1) 48%,rgba(107,186,112,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -49,19 +49,17 @@ p {
 }
 
 #alumni {
-  height: 100%;
   background-image: url("../images/underwater.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 #sponsor {
-  height: 100%;
   background-color: #00AEEF;
   background-image: url("../images/octo-image.gif");
   background-repeat: no-repeat;
 }
 
 #contact {
-  height: 100%;
+  
 }
