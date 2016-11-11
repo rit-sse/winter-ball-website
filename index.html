@@ -13,41 +13,53 @@
 		<script type="text/javascript" src="assets/fullpage.js/jquery.fullpage.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#fullpage').fullpage();
+				$('#fullpage').fullpage({
+					afterRender: function(){
+						var pluginContainer = $(this);
+						
+						$(pluginContainer).css("margin-top", "-23px");
+					}
+					afterSlideLoad: function(){
+						
+					}
+				});
+				
+				$(".year").html(new Date().getFullYear());
+				
+				var arrow = document.createElement("img");
+				arrow.setAttribute("class", "arrow");
+				arrow.setAttribute("src", "assets/images/arrow.png");				
+
+				$(".arrow").click(function(){
+					$.fn.fullpage.moveSectionDown();
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<div id="fullpage">
 			<section class="section" id="home">
-				<h1>Society of Software Engineer's</h1>
-				<h2 class="raleway"><span id="year"></span> Annual Winterball</h2>
+				<h1 class="section-title">Society of Software Engineer's</h1>
+				<h2><span class="year"></span> Annual Winter Ball</h2>
+				<h3><em>December 3, 2016</em></h3>
 			</section>
 
 			<section class="section" id="tickets">
-				<h1>Tickets</h1>
+				<h1 class="section-title">Tickets</h1>
 				<p>THIS WEBSITE IS AWESOME!!!!</p>
 			</section>
 
 			<section class="section" id="alumni">
-				
+				<h1 class="section-title">Alumni</h1>
 			</section>
 
 			<section class="section" id="sponsor">
-
+				<h1 class="section-title">Sponsor the <span class="year"></span> Winter Ball
 			</section>
 
 			<section class="section" id="contact">
-
+				<h1 class="section-title">Contact the SSE Winter Ball Committee</h1>
 			</section>
 		</div>
 	</body>
-	<script>
-		function get_year(){
-			this.d = new Date();
-			this.y = this.d.getFullYear();
-		}
-		var year = new get_year();
-		document.getElementById("year").innerHTML = year.y
-	</script>
 </html>
