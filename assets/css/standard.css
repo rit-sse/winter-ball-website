@@ -132,3 +132,11 @@ p {
 .platinum{
   background-color: #e4e3e2;
 }
+
+dt{
+  font-size: 2.0em;
+}
+
+dl{
+  font-size: 1.5em;
+}

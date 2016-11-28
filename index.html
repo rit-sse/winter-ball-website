@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
-		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<!-- <meta content="width=device-width,initial-scale=1" name="viewport"> -->
 		<title>SSE Winter Ball 2016</title>
 		<link rel="stylesheet" href="assets/css/paper.min.css" type="text/css">
 		<link rel="styhesheet" href="assets/fullpage.js/jquery.fullpage.min.css" type="text/css">
@@ -13,16 +13,18 @@
 		<script type="text/javascript" src="assets/fullpage.js/jquery.fullpage.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#fullpage').fullpage({
-					afterRender: function(){
-						var pluginContainer = $(this);
+				if($(window).width() >= 1200){
+					$('#fullpage').fullpage({
+						afterRender: function(){
+							var pluginContainer = $(this);
 
-						$(pluginContainer).css("margin-top", "-23px");
-					},
-					afterSlideLoad: function(){
+							$(pluginContainer).css("margin-top", "-23px");
+						},
+						afterSlideLoad: function(){
 
-					}
-				});
+						}
+					});
+				}
 
 				$(".year").html(new Date().getFullYear());
 
@@ -91,6 +93,23 @@
 						</div>
 						<div class="col-md-6">
 							<h3>Our Top Sponsors</h3>
+							<dl>
+								<dt>Platinum</dt>
+								<dd>Mickey Mouse</dd>
+							</dl>
+							<dl>
+								<dt>Gold</dt>
+								<dd>Joey D. (From Long Island)</dd>
+								<dd>Shadowy Cabol</dd>
+							</dl>
+							<dl>
+								<dt>Silver</dt>
+								<dd>MyCompany</dd>
+							</dl>
+							<dl>
+								<dt>Bronze</dt>
+								<dd>Principality of Sealand</dd>
+							</dl>
 						</div>
 					</div>
 				</div>
