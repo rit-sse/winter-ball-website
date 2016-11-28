@@ -116,3 +116,19 @@ p {
     width: 50px;
 	cursor: pointer;
 }
+
+.bronze{
+  background-color: #8C7853;
+}
+
+.silver{
+  background-color: silver;
+}
+
+.gold{
+  background-color: #CFB53B;
+}
+
+.platinum{
+  background-color: #e4e3e2;
+}
