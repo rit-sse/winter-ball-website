@@ -32,6 +32,14 @@
 				arrow.setAttribute("class", "arrow");
 				arrow.setAttribute("src", "assets/images/arrow.png");
 
+				$("section").each(function(){
+					var arrow = document.createElement("img");
+					arrow.setAttribute("class", "arrow");
+					arrow.setAttribute("src", "assets/images/arrow.png");
+
+					$(this).append(arrow);
+				});
+
 				$(".arrow").click(function(){
 					$.fn.fullpage.moveSectionDown();
 				});

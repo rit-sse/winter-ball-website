@@ -17,6 +17,7 @@ html, body{
 
 #fullpage{
 	font-family: "Raleway";
+  height: 100%;
 }
 
 @media(min-width: 1200px){
@@ -26,6 +27,10 @@ html, body{
     margin:0 auto;
     height: 100%;
     border-radius: 15px;
+  }
+
+  section{
+    height: 100%;
   }
 }
 
