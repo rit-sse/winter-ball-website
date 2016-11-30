@@ -99,9 +99,6 @@ p {
 
   color: black;
 }
-#sponsor a, a:visited{
-  color: darkblue;
-}
 
 #contact {
   background-color: #7DD0E3;
@@ -166,10 +163,17 @@ dt, dl{
 }
 
 .sponsor-button{
-  padding: 30px;
+  padding: 10px 30px 10px 30px;
   background-color: #0044FF;
   color: white;
   text-decoration: none;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 10px;
+}
+
+.sponsor-button:hover, .sponsor-button:active{
+  color: white;
+  font-weight: bold;
 }
 
 #screensaver{
