@@ -55,6 +55,10 @@ h3{
 	font-family: "Raleway";
 }
 
+a, a:visited{
+  color: #0A6E90;
+}
+
 p {
   font-family: "Raleway";
   font-size: 14pt;
@@ -221,4 +225,78 @@ dt, dl{
   text-align: center;
   line-height: 1.0;
   padding-bottom: 10px;
+}
+
+.action-button{
+  background-color: #FCFD95;
+  padding: 30px 10px 30px 10px;
+  border: 2px solid black;
+  text-decoration: none;
+  margin: 0 auto;
+  display: table;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 3.5em;
+  color: black;
+  font-weight: bold;
+}
+
+.box{
+  background-color: rgba(200, 200, 200, 0.9);
+  box-shadow: 4px 4px 2px gray;
+  padding: 10px;
+}
+
+.fancy{
+  font-family: "Pacifico", "Brush Script MT";
+}
+
+#sponsor-table{
+  min-width: 90%;
+}
+
+.sponsor-logos{
+  text-align: center;
+}
+
+#sponsor-table .sponsor-platinum img{
+  width: 500px;
+}
+
+#sponsor-table .sponsor-gold img{
+  width: 300px;
+}
+
+#sponsor-table .sponsor-silver img{
+  width: 200px;
+}
+
+#sponsor-table .sponsor-bronze img{
+  width: 150px;
+}
+
+@media(max-width: 500px){
+  #sponsor-table img{
+    max-width: 100%;
+  }
+}
+
+#sponsor-table img{
+  top: 50%;
+}
+
+#sponsor-table .sponsor-rank th{
+  font-size: 2.6em;
+  font-weight: bold;
+}
+
+#sponsor-table .sponsor-rank td{
+  font-size: 2.0em;
+  text-align: right;
+}
+
+#sponsor-table .sponsor-people{
+  line-height: 1.1;
+  margin-top: 30px;
+  font-size: 18pt;
 }

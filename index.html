@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
-		<!-- <meta content="width=device-width,initial-scale=1" name="viewport"> -->
+		<meta content="width=device-width,initial-scale=1" name="viewport">
 		<title>SSE Winter Ball 2016</title>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="assets/css/paper.min.css" type="text/css">
 		<link rel="styhesheet" href="assets/fullpage.js/jquery.fullpage.min.css" type="text/css">
 		<link rel="stylesheet" href="assets/css/standard.css" type="text/css">
@@ -59,9 +60,19 @@
 				    }
 				}
 
-				setTimeout('$("#yacht").animate({left:600, opacity:"show"}, 1500)', 2000);
-				// setTimeout('$("#yacht").animate({left:-600, bottom:-600, opacity:"hide"}, 1500)', 6000);
-				setTimeout('document.getElementById("horn").play();', 3750);
+				if($(window).width() >= 1200){
+					setTimeout('$("#yacht").animate({left:600, opacity:"show"}, 1500)', 2000);
+					// setTimeout('$("#yacht").animate({left:-600, bottom:-600, opacity:"hide"}, 1500)', 6000);
+					setTimeout('document.getElementById("horn").play();', 3750);
+				}
+				else{
+					$("#yacht").hide();
+				}
+
+				// Size of fishy
+				if($(window).width() < 622){
+					// Nah. I'll do this later.
+				}
 
 				$(function() {
 				  $('a[href*="#"]:not([href="#"])').click(function() {
@@ -86,6 +97,9 @@
 				<h1 class="section-title">Society of Software Engineers'</h1>
 				<h2><span class="year"></span> Annual Winter Ball</h2>
 				<h3><em>December 3, 2016</em></h3>
+				<h4 style="text-align: center"><em>8:00pm - Golisano Atrium</em></h4>
+
+				<a class="action-button" href="http://sse.rit.edu/go/songs" target="_blank">Make a Song Request!</a>
 
 				<audio id="horn" src="assets/horn2.mp3" preload></audio>
 
@@ -134,7 +148,32 @@
 			<section class="section" id="alumni">
 				<div class="page">
 					<h1 class="section-title">Alumni</h1>
-
+						<hr>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box">
+								<h3 class="fancy">You're Invited.</h3>
+								<p>The Society of Software Engineers at RIT would like to cordially invite you to our annual Winter Ball event. Our event will be held in the Atrium of the Thomas Golisano College of Computing and Information Sciences (bldg. 70).</p>
+								<p>This year's theme is inspired by a Yacht Club event. Come enjoy a formal evening on the sea, under the stars, bubbly in hand, and in good company of your fellow SSE mates and other RIT Golisano alumni, staff, faculty, and current students. All aboard the SS-Yacht!</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="box">
+								<h3 class="fancy">SSE Officer and Alumni Dinner</h3>
+								<p>We would like to invite you to an exclusive Alumni and current SSE Officier dinner event. If you are interested in attending <a href="http://sse.rit.edu/go/winterballdinner-rsvp" target="_blank">RSVP</a> ASAP.</p>
+									<hr>
+								<h4><strong>Restaurant Details:</strong></h4>
+								<strong>Restaurant:</strong> <em>Monroe's Restaurant and Bar</em>
+									<br>
+								<strong>Address:</strong> 3001 Monroe Ave. Rochester, NY 14618
+									<br>
+								<strong>Time:</strong> 6:00pm
+									<br><br>
+								<a href="https://www.google.com/url?q=http://media.wix.com/ugd/4bef48_3ff0ae53cc5b4a27af9b026420bec4f4.pdf&sa=D&ust=1480656393838000&usg=AFQjCNGVWE_ZIZOy1juV1s4hjNmbk0g34A" target="_blank">Menu and Pricing</a>
+							</div>
+						</div>
+					</div>
+						<br><br>
 				</div>
 			</section>
 
@@ -143,56 +182,96 @@
 					<h1 class="section-title">Sponsor the <span class="year"></span> Winter Ball</h1>
 						<hr>
 					<div class="row">
-						<div class="col-md-6">
-							<h3>Sponsor the <span class="year"></span> Winterball</h3>
-							<!--<p>To Sponsor the <span class="year"></span> Winterball, send an email to <a href="mailto:pr@sse.rit.edu" style="color: darkblue;">pr@sse.rit.edu</a>.</p>-->
-							<div class="text-center"><a class="sponsor-button" href="javascript:void(0);">Click here to sponsor the <span class="year"></span> Winter Ball!</a></div>
+						<div class="col-md-4">
+							<h2>Sponsor the <span class="year"></span> Winter Ball!</h2>
+							<ol>
+								<li><a href="http://www.rit.edu/giving/makeagift" target="_blank">Make a Gift</a> to the Society of Software Engineers <strong>OR</strong> send prizes for our raffle to <a href="#contact">our address</a>.</li>
+								<li>Send an email to <a href="mailto:winterball@sse.rit.edu">winterball@sse.rit.edu</a> informing us of your generocity.</li>
+							</ol>
+						</div>
+						<div class="col-md-8">
+							<h2>This Year's Amazing Sponsors</h2>
 
-							<br><br>
-
-							<h4>Sponsor Tiers</h4>
-							<table class="table">
-								<tr class="platinum">
-									<th>Titanic</th>
+							<table class="table" id="sponsor-table">
+								<tr class="sponsor-rank platinum">
+									<th colspan = "2">Titanic</th>
 									<td>$1000 or more</td>
 								</tr>
-								<tr class="gold">
-									<th>Cruise Liner</th>
+								<tr class="sponsor-logos sponsor-platinum">
+									<td colspan = "3">
+										<div class="row">
+											<div class="col-md-12">
+												<img src="assets/images/sponsors/harris.png">
+											</div>
+										</div>
+									</td>
+								</tr>
+
+								<tr class="sponsor-rank gold">
+									<th colspan = "2">Cruise Liner</th>
 									<td>$250 - $999</td>
 								</tr>
-								<tr class="silver">
-									<th>Tugboat</th>
+								<tr class="sponsor-logos sponsor-gold">
+									<td colspan="3">
+										<div class="row">
+											<div class="col-md-6">
+												<img src="assets/images/sponsors/microsoft.png">
+											</div>
+											<div class="col-md-6">
+												<img src="assets/images/sponsors/datto.png">
+											</div>
+										</div>
+									</td>
+								</tr>
+
+								<tr class="sponsor-rank silver">
+									<th colspan = "2">Tugboat</th>
 									<td>$100 - $249</td>
 								</tr>
-								<tr class="bronze">
-									<th>Friend-Ship</th>
+								<tr class="sponsor-logos sponsor-silver">
+									<td colspan="3">
+										<div class="row">
+											<div class="col-md-6">
+												<img src="assets/images/sponsors/google.png">
+											</div>
+											<div class="col-md-6">
+												<img src="assets/images/sponsors/amazon.png">
+											</div>
+										</div>
+									</td>
+								</tr>
+
+								<tr class="sponsor-rank bronze">
+									<th colspan = "2">Friend-Ship</th>
 									<td>$50 - $99</td>
 								</tr>
-								<!-- <tr style="border: 1px solid white;">
-									<th>Floaties</th>
-									<td>$0.01 - $49</td>
-								</tr> -->
+								<tr class="sponsor-logos sponsor-bronze">
+									<td colspan="3">
+										<div class="row">
+											<div class="col-md-4">
+												<img src="assets/images/sponsors/magna-powertrain.png">
+											</div>
+											<div class="col-md-4">
+												<img src="assets/images/sponsors/constant-contact.png">
+											</div>
+											<div class="col-md-4">
+												<img src="assets/images/sponsors/blackbaud.png">
+											</div>
+										</div>
+										<div class="row sponsor-people">
+											<div class="col-md-4">
+												Chris Bentivega
+											</div>
+											<div class="col-md-4">
+												Kristen Mills											
+											</div>
+											<div class="col-md-4">
+												Benjin Dubishar
+											</div>
+										</div>
+									</td>
+								</tr>
 							</table>
-						</div>
-						<div class="col-md-6" id="sponsors">
-							<h3>Our Top Sponsors</h3>
-							<dl>
-								<dt>Platinum</dt>
-								<dd>Mickey Mouse</dd>
-							</dl>
-							<dl>
-								<dt>Gold</dt>
-								<dd>Joey D. (From Long Island)</dd>
-								<dd>Shadowy Cabol</dd>
-							</dl>
-							<dl>
-								<dt>Silver</dt>
-								<dd>MyCompany</dd>
-							</dl>
-							<dl>
-								<dt>Bronze</dt>
-								<dd>Principality of Sealand</dd>
-							</dl>
 						</div>
 					</div>
 				</div>
@@ -200,7 +279,44 @@
 
 			<section class="section" id="contact">
 				<div class="page">
-					<h1 class="section-title">Contact the SSE Winter Ball Committee</h1>
+					<h1 class="section-title">Contact the Winter Ball Committee</h1>
+						<hr>
+					<div class="row">
+						<div class="col-md-6">
+							<dl>
+								<dt>Email</dt>
+								<dd><a href="mailto:winterball@sse.rit.edu">winterball@sse.rit.edu</a></dd>
+							</dl>
+						</div>
+						<div class="col-md-6">
+							<dl>
+								<dt>Phone</dt>
+								<dd>585-475-5461</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<dl>
+								<dt>SSE Website</dt>
+								<dd><a href="http://sse.rit.edu">sse.rit.edu</a>
+							</dl>
+						</div>
+						<div class="col-md-6">
+							<dl>
+								<dt>Mailing Address</dt>
+								<dd>
+									<address>
+										<strong>Society of Software Engineers</strong>
+											<br>
+										134 Lomb Memorial Drive
+											<br>
+										Rochester NY, 14623
+									</address>
+								</dd>
+							</dl>
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
