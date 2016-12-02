@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="assets/fullpage.js/jquery.fullpage.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+					/*
 				if($(window).width() >= 1200){
 					$('#fullpage').fullpage({
 						afterRender: function(){
@@ -25,14 +26,10 @@
 						}
 					});
 				}
+					*/
 
+				
 				$(".year").html(new Date().getFullYear());
-
-				var arrow = document.createElement("img");
-				arrow.setAttribute("class", "arrow");
-				arrow.setAttribute("src", "assets/images/arrow.png");
-
-				$("section").append(arrow);
 
 				$(".arrow").click(function(){
 					$.fn.fullpage.moveSectionDown();
@@ -65,21 +62,35 @@
 				setTimeout('$("#yacht").animate({left:600, opacity:"show"}, 1500)', 2000);
 				// setTimeout('$("#yacht").animate({left:-600, bottom:-600, opacity:"hide"}, 1500)', 6000);
 				setTimeout('document.getElementById("horn").play();', 3750);
+
+				$(function() {
+				  $('a[href*="#"]:not([href="#"])').click(function() {
+				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				      var target = $(this.hash);
+				      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				      if (target.length) {
+				        $('html, body').animate({
+				          scrollTop: target.offset().top
+				        }, 1000);
+				        return false;
+				      }
+				    }
+				  });
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<div id="fullpage">
 			<section class="section" id="home">
-				<div class="">
-					<h1 class="section-title">Society of Software Engineer's</h1>
-					<h2><span class="year"></span> Annual Winter Ball</h2>
-					<h3><em>December 3, 2016</em></h3>
+				<h1 class="section-title">Society of Software Engineers'</h1>
+				<h2><span class="year"></span> Annual Winter Ball</h2>
+				<h3><em>December 3, 2016</em></h3>
 
-					<img src="assets/images/yacht.png" id="yacht">
+				<audio id="horn" src="assets/horn2.mp3" preload></audio>
 
-					<audio id="horn" src="assets/horn.mp3" preload></audio>
-				</div>
+				<img src="assets/images/yacht.png" id="yacht">
+				<a href="#tickets"><img src="assets/images/arrow.png" class="arrow"></a>
 			</section>
 
 			<section class="section" id="tickets">
@@ -89,10 +100,8 @@
 						<hr>
 					<div class="row">
 						<div class="col-md-6">
-							<h3>Method 1:</h3>
 							<p>Stop by the SE Department Office (GOL-1690) and purchase a ticket at the desk.</p>
-								<br>
-							<h3>Method 2:</h3>
+								<div class="ruler"><span>OR</span></div>
 							<p>Mail a check or cash to:</p>
 							<address>
 								<strong>Society of Software Engineers</strong>
@@ -114,6 +123,11 @@
 							</dl>
 						</div>
 					</div>
+						<hr>
+					<div class="message">
+						<p>Raffle tickets will be presented upon arrival.</p>
+						<p>An additional "arms-length" worth of tickets may be purchased for $10.</p>
+					</div>
 				</div>
 			</section>
 
@@ -128,11 +142,13 @@
 				<div class="page">
 					<h1 class="section-title">Sponsor the <span class="year"></span> Winter Ball</h1>
 						<hr>
-					<div class="text-center"><a class="sponsor-button" href="javascript:void(0);">Click here to sponsor the <span class="year"></span> Winter Ball!</a></div>
 					<div class="row">
 						<div class="col-md-6">
 							<h3>Sponsor the <span class="year"></span> Winterball</h3>
-							<p>To Sponsor the <span class="year"></span> Winterball, send an email to <a href="mailto:pr@sse.rit.edu" style="color: darkblue;">pr@sse.rit.edu</a>.</p>
+							<!--<p>To Sponsor the <span class="year"></span> Winterball, send an email to <a href="mailto:pr@sse.rit.edu" style="color: darkblue;">pr@sse.rit.edu</a>.</p>-->
+							<div class="text-center"><a class="sponsor-button" href="javascript:void(0);">Click here to sponsor the <span class="year"></span> Winter Ball!</a></div>
+
+							<br><br>
 
 							<h4>Sponsor Tiers</h4>
 							<table class="table">
@@ -152,6 +168,10 @@
 									<th>Friend-Ship</th>
 									<td>$50 - $99</td>
 								</tr>
+								<!-- <tr style="border: 1px solid white;">
+									<th>Floaties</th>
+									<td>$0.01 - $49</td>
+								</tr> -->
 							</table>
 						</div>
 						<div class="col-md-6" id="sponsors">
@@ -186,7 +206,7 @@
 		</div>
 
 		<div id="screensaver">
-			<div id="sunk"></div>
+			<div id="sunk"><h1>Click anywhere to dismiss</h1></div>
 		</div>
 	</body>
 </html>

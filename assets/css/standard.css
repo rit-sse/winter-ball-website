@@ -26,20 +26,20 @@ html, body{
     background-color: rgba(255, 255, 255, 0.3);
     color: #444444;
     margin:0 auto;
-    height: 100%;
+    min-height: 100%;
     border-radius: 15px;
     font-size: 1.2em;
   }
 
   section{
-    height: 100%;
+    min-height: 100%;
   }
 }
 
 .section-title{
 	font-family: "Lobster";
-	padding-top: 1em;
 	font-size: 45pt;
+  margin: 0;
 }
 
 
@@ -62,12 +62,18 @@ p {
 
 .page{
   padding: 0 40px 0 40px;
+  min-height: 100%;
+}
+
+section{
+  min-height: 100%;
 }
 
 #home {
   background-image: url("../images/waves.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  height: 100%;
 }
 
 #tickets {
@@ -114,14 +120,14 @@ p {
 }
 
 .arrow {
-    animation: bouncing 1s infinite ease-in-out;
-    bottom: 0;
-    display: block;
-    height: 50px;
-    left: 50%;
-    margin-left: -25px;
-    position: absolute;
-    width: 50px;
+  animation: bouncing 1s infinite ease-in-out;
+  bottom: 0;
+  display: block;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
 	cursor: pointer;
 }
 
@@ -156,8 +162,9 @@ dt, dl{
 }
 
 #yacht{
-  position: fixed;
   bottom: 0;
+  
+  position: absolute;
   
   width: 600px; 
 }
@@ -195,7 +202,7 @@ dt, dl{
   background-repeat: no-repeat;
   background-size: 100% auto;
 
-  box-shadow: 40px -40px 40px dark;
+  box-shadow: 40px -40px 40px darkblue;
 
   z-index: 1001;
   width: 100%;
@@ -205,4 +212,13 @@ dt, dl{
 
 #horn{
   display: none;
+}
+
+.ruler {font-size:20px;border-top: 1px solid #444444;z-index:1;}
+.ruler span { position: relative; top:-20px; margin:0 auto;display:table;z-index:5;padding: 0 10px 0 10px;background-color: #5ACDC4;}
+
+.message{
+  text-align: center;
+  line-height: 1.0;
+  padding-bottom: 10px;
 }
